@@ -4,15 +4,150 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white"
     tools:context=".MainActivity">
 
-    <TextView
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:background="#713BDB"
+        tools:ignore="MissingConstraints">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:text="Tugas 1 - Pemrograman 5"
+            android:textSize="20dp"
+            android:textColor="#fff"
+            android:textStyle="bold"
+            android:fontFamily="@font/poppins_bold"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_margin="20dp"
+        tools:ignore="MissingConstraints">
+
+        <LinearLayout
+            android:id="@+id/layout1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/editTextNilaiA"
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:hint="Nilai A"
+                android:fontFamily="@font/poppins_bold"
+                android:textColor="#000"/>
+
+            <EditText
+                android:id="@+id/editTextNilaiB"
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:hint="Nilai B"
+                android:fontFamily="@font/poppins_bold"
+                android:textColor="#000"/>
+
+            <TextView
+                android:id="@+id/textViewHasil"
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:textSize="20dp"
+                android:hint="Hasil"
+                android:fontFamily="@font/poppins_bold"
+                android:textColor="#000"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/layout2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_constraintTop_toBottomOf="@id/layout1"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal"
+            >
+
+            <Button
+                android:id="@+id/btnPlus"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="+"
+                android:textStyle="bold"
+                android:fontFamily="@font/poppins_bold"
+                android:background="@drawable/btn_selector"
+                />
+
+            <Button
+                android:id="@+id/btnMin"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:text="-"
+                android:textStyle="bold"
+                android:fontFamily="@font/poppins_bold"
+                android:background="@drawable/btn_selector"
+                />
+
+            <Button
+                android:id="@+id/btnTime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:text="*"
+                android:textStyle="bold"
+                android:fontFamily="@font/poppins_bold"
+                android:background="@drawable/btn_selector"
+                />
+
+            <Button
+                android:id="@+id/btnDivide"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:text="/"
+                android:textStyle="bold"
+                android:fontFamily="@font/poppins_bold"
+                android:background="@drawable/btn_selector"
+                />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/layout3"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_constraintTop_toBottomOf="@id/layout2"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal"
+            >
+
+            <Button
+                android:id="@+id/btnClear"
+                android:layout_width="383dp"
+                android:layout_height="wrap_content"
+                android:text="Clear"
+                android:textStyle="bold"
+                android:fontFamily="@font/poppins_bold"
+                android:background="@drawable/btn_selector"
+                />
+
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
