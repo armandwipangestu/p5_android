@@ -90,6 +90,7 @@
                 android:textStyle="bold"
                 android:fontFamily="@font/poppins_bold"
                 android:background="@drawable/btn_selector"
+                android:backgroundTint="#000"
                 />
 
             <Button
