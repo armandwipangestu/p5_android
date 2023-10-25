@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/txt_home"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="150dp"
+        android:gravity="center"
+        android:text="Welcome Home"
+        android:fontFamily="@font/poppins"
+        android:textColor="@color/ColorPrimary"
+        android:textStyle="bold"
+        android:textSize="25sp"
+        />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="245dp"
+        android:layout_marginTop="270dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp">
+
+        <ImageView
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="25dp"
+            android:src="@drawable/box"
+            android:background="@drawable/custom4"
+            android:id="@+id/boxIcon" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Box"
+            android:layout_marginTop="90dp"
+            android:layout_marginLeft="22dp"
+            android:textColor="#444444"
+            android:fontFamily="@font/poppins"
+            />
+
+        <ImageView
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_marginLeft="100dp"
+            android:layout_marginTop="25dp"
+            android:src="@drawable/hamper"
+            android:background="@drawable/custom4"
+            android:id="@+id/hamperIcon" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Hamper"
+            android:layout_marginTop="90dp"
+            android:layout_marginLeft="102dp"
+            android:textColor="#444444"
+            android:fontFamily="@font/poppins"
+            />
+
+        <ImageView
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_marginLeft="195dp"
+            android:layout_marginTop="25dp"
+            android:src="@drawable/wallet"
+            android:background="@drawable/custom4"
+            android:id="@+id/walletIcon" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Wallet"
+            android:layout_marginTop="90dp"
+            android:layout_marginLeft="200dp"
+            android:textColor="#444444"
+            android:fontFamily="@font/poppins"
+            />
+
+        <ImageView
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_marginLeft="290dp"
+            android:layout_marginTop="25dp"
+            android:src="@drawable/invest"
+            android:background="@drawable/custom4"
+            android:id="@+id/investIcon" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Invest"
+            android:layout_marginTop="90dp"
+            android:layout_marginLeft="298dp"
+            android:textColor="#444444"
+            android:fontFamily="@font/poppins"
+            />
+
+        <ImageView
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="135dp"
+            android:src="@drawable/location"
+            android:background="@drawable/custom4"
+            android:id="@+id/locationIcon" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Location"
+            android:layout_marginTop="200dp"
+            android:layout_marginLeft="5dp"
+            android:textColor="#444444"
+            android:fontFamily="@font/poppins"
+            />
+
+        <ImageView
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_marginLeft="100dp"
+            android:layout_marginTop="135dp"
+            android:src="@drawable/refund"
+            android:background="@drawable/custom4"
+            android:id="@+id/refundIcon" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Refund"
+            android:layout_marginTop="200dp"
+            android:layout_marginLeft="105dp"
+            android:textColor="#444444"
+            android:fontFamily="@font/poppins"
+            />
+
+        <ImageView
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_marginLeft="195dp"
+            android:layout_marginTop="135dp"
+            android:src="@drawable/bag"
+            android:background="@drawable/custom4"
+            android:id="@+id/bagIcon" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Bag"
+            android:layout_marginTop="200dp"
+            android:layout_marginLeft="211dp"
+            android:textColor="#444444"
+            android:fontFamily="@font/poppins"
+            />
+
+        <ImageView
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_marginLeft="290dp"
+            android:layout_marginTop="135dp"
+            android:src="@drawable/more"
+            android:background="@drawable/custom4"
+            android:id="@+id/moreIcon" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="More"
+            android:layout_marginTop="200dp"
+            android:layout_marginLeft="302dp"
+            android:textColor="#444444"
+            android:fontFamily="@font/poppins"
+            />
+
+    </RelativeLayout>
+
+</RelativeLayout>
