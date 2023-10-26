@@ -2,6 +2,11 @@ package com.dashboardnavigation;
 
 import android.os.Bundle;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.EditText;
+import android.widget.Button;
+import android.widget.ImageView;
+import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -58,5 +63,26 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         bottomNavigationView = findViewById(R.id.btn_navigasi_menu);
         bottomNavigationView.setOnItemSelectedListener(navigation);
+
+        EditText etSearch = findViewById(R.id.search);
+        Button btnPay = findViewById(R.id.btnPay);
+        ImageView searchIcon = findViewById(R.id.searchIcon);
+        TextView etSearchResult = findViewById(R.id.searchResult);
+
+        btnPay.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String name = etSearch.getText().toString();
+                etSearchResult.setText("Result: " + name);
+            }
+        });
+
+        searchIcon.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String name = etSearch.getText().toString();
+                etSearchResult.setText("Result: " + name);
+            }
+        });
     }
 }
