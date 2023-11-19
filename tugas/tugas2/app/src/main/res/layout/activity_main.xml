@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".MainActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:background="#713BDB" />
+
+    <!--    Custom 1-->
+    <RelativeLayout
+        android:layout_width="320dp"
+        android:layout_height="40dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/custom1">
+
+        <!--        Icon Search-->
+        <ImageView
+            android:id="@+id/searchIcon"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:src="@drawable/search"
+            android:layout_marginLeft="5dp"/>
+
+<!--        <EditText-->
+<!--            android:id="@+id/search"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_marginLeft="50dp"-->
+<!--            android:hint="Find services, food, or place"-->
+<!--            android:textColorHint="#888"-->
+<!--            android:textColor="#000000"-->
+<!--            android:fontFamily="@font/poppins"-->
+<!--            android:textSize="11dp"-->
+<!--            />-->
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/search"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="37dp"
+        android:layout_marginLeft="60dp"
+        android:hint="Find services, food, or place"
+        android:textColorHint="#888"
+        android:textColor="#000000"
+        android:fontFamily="@font/poppins"
+        android:textSize="14dp"
+        android:background="@null"
+        />
+
+    <!--    Icon User-->
+    <ImageView
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:src="@drawable/user"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="25dp"
+        android:layout_marginRight="10dp"
+        android:scaleType="centerCrop"/>
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/ColorPrimary"
+        android:id="@+id/btn_navigasi_menu"
+        android:layout_alignParentBottom="true"
+        app:menu="@menu/bottom_menu"
+        app:itemIconTint="@color/white"
+        />
+
+    <FrameLayout
+        android:id="@+id/container_fragment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/btn_navigasi_menu"
+        />
+
+</RelativeLayout>
