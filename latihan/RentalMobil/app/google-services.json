@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "725708787422",
+    "project_id": "rental-mobil-bde39",
+    "storage_bucket": "rental-mobil-bde39.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:725708787422:android:a48dbaa7d6cbb6def57c4f",
+        "android_client_info": {
+          "package_name": "com.latihan.rentalmobil"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBKLjTngDzfy-zmXvOZ_K_n1IrI8cjLay0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
