@@ -3,6 +3,13 @@
     <style name="Base.Theme.RentalMobil" parent="Theme.Material3.DayNight.NoActionBar">
         <!-- Customize your light theme here. -->
         <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorOnSurface">@color/colorOnSurface</item>
+<!--        <item name="colorOutline">@color/colorOutline</item>-->
+<!--        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>-->
+<!--        <item name="colorAccent">@color/colorAccent</item>-->
+
+        <item name="android:windowContentTransitions">true</item>
     </style>
 
     <style name="Theme.RentalMobil" parent="Base.Theme.RentalMobil" />
