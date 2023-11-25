@@ -10,7 +10,7 @@ import android.widget.TextView;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
-public class Dashboard extends AppCompatActivity {
+public class Dashboard extends BaseActivity {
 
     // Variables
     TextView namaLengkap;
@@ -18,44 +18,32 @@ public class Dashboard extends AppCompatActivity {
     // Global Variables to hold user data inside this activity
     String _NAMA_LENGKAP_;
 
-    // Bottom Navigation
-    BottomNavigationView bottomNavigationView;
-
-    private BottomNavigationView.OnNavigationItemSelectedListener navigation = new BottomNavigationView.OnNavigationItemSelectedListener() {
-
-        @Override
-        public boolean onNavigationItemSelected(@NonNull MenuItem item) {
-            int itemId = item.getItemId();
-
-            if (itemId == R.id.transaction) {
-                Intent intent = new Intent(Dashboard.this, Transaction.class);
-                startActivity(intent);
-                finish();
-                return true;
-            }
-
-            return true;
-        }
-    };
+//    @Override
+//    protected void onCreate(Bundle savedInstanceState) {
+//        super.onCreate(savedInstanceState);
+//        setContentView(R.layout.activity_dashboard);
+//
+//        // Hooks
+//        namaLengkap = findViewById(R.id.namaLengkap);
+//
+//        showData();
+//    }
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_dashboard);
-        bottomNavigationView = findViewById(R.id.bottomNavigation);
-        bottomNavigationView.setOnItemSelectedListener(navigation);
-
-        // Hooks
-        namaLengkap = findViewById(R.id.namaLengkap);
-
-        showData();
+    int getLayoutId() {
+        return R.layout.activity_dashboard;
     }
 
-    private void showData() {
-        Intent intent = getIntent();
-
-        _NAMA_LENGKAP_ = intent.getStringExtra("namaLengkap");
-
-        namaLengkap.setText(_NAMA_LENGKAP_);
+    @Override
+    int getBottomNavigationMenuItemId() {
+        return R.id.listCar;
     }
+
+//    private void showData() {
+//        Intent intent = getIntent();
+//
+//        _NAMA_LENGKAP_ = intent.getStringExtra("namaLengkap");
+//
+//        namaLengkap.setText(_NAMA_LENGKAP_);
+//    }
 }
