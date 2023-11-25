@@ -14,21 +14,20 @@ import android.widget.Toast;
 
 import com.google.android.material.textfield.TextInputLayout;
 
-public class SignIn extends AppCompatActivity {
+public class SignUp extends AppCompatActivity {
 
     // Variables
     ImageView logo;
     TextView title, tagline;
     TextInputLayout username, password;
-    Button signInButton, signInToSignUpButton;
-
+    Button signUpButton, signUpToSignInButton;
     private static final int _TIME_INTERVAL = 2000; // time for between 2x when press back (in miliseconds)
     private long backPressedTime = 0; // initialize back press
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_sign_in);
+        setContentView(R.layout.activity_sign_up);
 
         // Hooks
         logo = findViewById(R.id.logo);
@@ -36,12 +35,12 @@ public class SignIn extends AppCompatActivity {
         tagline = findViewById(R.id.tagline);
         username = findViewById(R.id.username);
         password = findViewById(R.id.password);
-        signInButton = findViewById(R.id.signInButton);
-        signInToSignUpButton = findViewById(R.id.signInToSignUpButton);
+        signUpButton = findViewById(R.id.signUpButton);
+        signUpToSignInButton = findViewById(R.id.signUpToSignInButton);
     }
 
-    public void signInToSignUpButtonClick(View v) {
-        Intent intent = new Intent(SignIn.this, SignUp.class);
+    public void signUpToSignInButtonClick(View v) {
+        Intent intent = new Intent(SignUp.this, SignIn.class);
 
         Pair[] pairs = new Pair[7];
 
@@ -50,10 +49,10 @@ public class SignIn extends AppCompatActivity {
         pairs[2] = new Pair<View,String>(tagline, "text_tagline");
         pairs[3] = new Pair<View,String>(username, "input_username");
         pairs[4] = new Pair<View,String>(password, "input_password");
-        pairs[5] = new Pair<View,String>(signInButton, "action_button");
-        pairs[6] = new Pair<View,String>(signInToSignUpButton, "change_view");
+        pairs[5] = new Pair<View,String>(signUpButton, "action_button");
+        pairs[6] = new Pair<View,String>(signUpToSignInButton, "change_view");
 
-        ActivityOptions options = ActivityOptions.makeSceneTransitionAnimation(SignIn.this, pairs);
+        ActivityOptions options = ActivityOptions.makeSceneTransitionAnimation(SignUp.this, pairs);
         startActivity(intent, options.toBundle());
         finish();
     }

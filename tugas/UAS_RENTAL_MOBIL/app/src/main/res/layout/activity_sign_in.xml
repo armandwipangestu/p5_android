@@ -12,7 +12,6 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
-        android:background="@color/white"
         android:padding="20dp">
 
         <ImageView
@@ -46,9 +45,11 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
             android:layout_marginBottom="20dp"
             android:orientation="vertical">
 
+            <!-- Start Input Field Username -->
             <com.google.android.material.textfield.TextInputLayout
                 android:id="@+id/username"
                 android:layout_width="match_parent"
@@ -62,10 +63,13 @@
                 <com.google.android.material.textfield.TextInputEditText
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:inputType="text"
                     />
 
             </com.google.android.material.textfield.TextInputLayout>
+            <!-- End Input Field Username -->
 
+            <!-- Start Input Field Password -->
             <com.google.android.material.textfield.TextInputLayout
                 android:id="@+id/password"
                 android:layout_width="match_parent"
@@ -85,6 +89,7 @@
                     />
 
             </com.google.android.material.textfield.TextInputLayout>
+            <!-- End Input Field Password -->
 
             <Button
                 android:layout_width="200dp"
@@ -115,13 +120,14 @@
                 android:id="@+id/signInToSignUpButton"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:backgroundTint="#e2e8f0"
-                android:textColor="#94a3b8"
-                android:text="Belum mempunyai akun? Daftar disini"
-                android:fontFamily="@font/poppins"
                 android:layout_marginTop="5dp"
                 android:layout_marginBottom="5dp"
-                android:transitionName="action_button" />
+                android:backgroundTint="#e2e8f0"
+                android:fontFamily="@font/poppins"
+                android:onClick="signInToSignUpButtonClick"
+                android:text="Belum mempunyai akun? Daftar disini"
+                android:textColor="#94a3b8"
+                android:transitionName="change_view" />
 
         </LinearLayout>
 
