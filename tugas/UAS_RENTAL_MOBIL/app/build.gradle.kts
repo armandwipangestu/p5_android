@@ -4,7 +4,7 @@ plugins {
 
 android {
     namespace = "com.tugas.uas_rentalmobil"
-    compileSdk = 33
+    compileSdk = 34
 
     defaultConfig {
         applicationId = "com.tugas.uas_rentalmobil"

@@ -2,6 +2,9 @@
     <!-- Base application theme. -->
     <style name="Base.Theme.UASRentalMobil" parent="Theme.Material3.DayNight.NoActionBar">
         <!-- Customize your dark theme here. -->
-        <!-- <item name="colorPrimary">@color/my_dark_primary</item> -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorOnSurface">@color/colorOnSurface</item>
+        <item name="android:windowContentTransitions">true</item>
     </style>
+    <style name="Theme.UASRentalMobil" parent="Base.Theme.UASRentalMobil" />
 </resources>
