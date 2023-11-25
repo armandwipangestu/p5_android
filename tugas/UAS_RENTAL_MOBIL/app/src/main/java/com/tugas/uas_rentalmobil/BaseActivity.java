@@ -41,15 +41,18 @@ public abstract class BaseActivity extends AppCompatActivity implements BottomNa
             int itemId = item.getItemId();
 
             if (itemId == R.id.listCar) {
-                startActivity(new Intent(this, Dashboard.class));
+                Intent intent = new Intent(this, ListCar.class);
+                startActivity(intent);
             }
 
             if (itemId == R.id.transaction) {
-                startActivity(new Intent(this, Transaction.class));
+                Intent intent = new Intent(this, Transaction.class);
+                startActivity(intent);
             }
 
             if (itemId == R.id.myProfile) {
-                startActivity(new Intent(this, Profile.class));
+                Intent intent = new Intent(this, Profile.class);
+                startActivity(intent);
             }
 
             finish();

@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.app.ActivityOptions;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.util.Pair;
 import android.view.View;
@@ -137,8 +138,14 @@ public class SignIn extends AppCompatActivity {
                         String emailFromDB = snapshot.child(userEnteredUsername).child("email").getValue(String.class);
                         String noTeleponFromDB = snapshot.child(userEnteredUsername).child("noTelepon").getValue(String.class);
 
+                        SharedPreferences preferences = getSharedPreferences("user_data", MODE_PRIVATE);
+                        SharedPreferences.Editor editor = preferences.edit();
+                        editor.putString("namaLengkap", namaLengkapFromDB);
+                        editor.putString("username", usernameFromDB);
+                        editor.apply();
+
                         // Prepare Dashboard View
-                        Intent intent = new Intent(SignIn.this, Dashboard.class);
+                        Intent intent = new Intent(SignIn.this, ListCar.class);
 
                         // Send all data from DB to Dashboard
                         intent.putExtra("namaLengkap", namaLengkapFromDB);

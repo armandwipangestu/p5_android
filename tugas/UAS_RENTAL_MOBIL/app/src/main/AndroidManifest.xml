@@ -22,7 +22,7 @@
             android:name=".Transaction"
             android:exported="false" />
         <activity
-            android:name=".Dashboard"
+            android:name=".ListCar"
             android:exported="false" />
         <activity
             android:name=".SignUp"
