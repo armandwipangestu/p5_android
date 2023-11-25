@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "598843015287",
+    "project_id": "uas---rental-mobil",
+    "storage_bucket": "uas---rental-mobil.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:598843015287:android:fe8e79f6f70886fa3cc672",
+        "android_client_info": {
+          "package_name": "com.tugas.uas_rentalmobil"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCxv9yh-jW_iWD_0NSFuVTfxThSMy_-aoE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

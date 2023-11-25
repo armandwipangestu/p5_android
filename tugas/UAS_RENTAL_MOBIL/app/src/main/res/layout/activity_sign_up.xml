@@ -108,6 +108,9 @@
                 style="@style/Widget.Material3.TextInputLayout.OutlinedBox"
                 android:transitionName="input_username">
 
+                <!-- app:counterEnabled="true" -->
+                <!-- app:counterMaxLength="15" -->
+
                 <com.google.android.material.textfield.TextInputEditText
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -185,12 +188,13 @@
             android:id="@+id/signUpButton"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:backgroundTint="@color/black"
-            android:textColor="@color/white"
-            android:text="Daftar"
-            android:fontFamily="@font/poppins"
             android:layout_marginTop="5dp"
             android:layout_marginBottom="5dp"
+            android:backgroundTint="@color/black"
+            android:fontFamily="@font/poppins"
+            android:onClick="signUpButtonClick"
+            android:text="Daftar"
+            android:textColor="@color/white"
             android:transitionName="action_button" />
 
         <Button
@@ -199,11 +203,11 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="5dp"
             android:layout_marginBottom="5dp"
-            android:backgroundTint="#e2e8f0"
+            android:backgroundTint="#f1f5f9"
             android:fontFamily="@font/poppins"
             android:onClick="signUpToSignInButtonClick"
             android:text="Sudah mempunyai akun? Masuk disini"
-            android:textColor="#94a3b8"
+            android:textColor="#64748b"
             android:transitionName="change_view" />
         <!-- End Button Action -->
 
