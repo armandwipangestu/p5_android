@@ -69,7 +69,8 @@
                 android:layout_margin="10dp"
                 app:cardBackgroundColor="#337DFE"
                 app:cardElevation="10dp"
-                app:strokeColor="@color/white">
+                app:strokeColor="#337DFE"
+                app:cardCornerRadius="5dp">
 
                 <RelativeLayout
                     android:layout_width="match_parent"
@@ -115,7 +116,8 @@
                 android:layout_margin="10dp"
                 app:cardBackgroundColor="#337DFE"
                 app:cardElevation="10dp"
-                app:strokeColor="@color/white">
+                app:strokeColor="#337DFE"
+                app:cardCornerRadius="5dp">
 
                 <RelativeLayout
                     android:layout_width="match_parent"
@@ -232,11 +234,12 @@
             <Button
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Perbarui"
-                android:textSize="15dp"
-                android:fontFamily="@font/poppins"
                 android:backgroundTint="#337DFE"
-                android:textColor="@color/white"/>
+                android:fontFamily="@font/poppins"
+                android:onClick="update"
+                android:text="Perbarui"
+                android:textColor="@color/white"
+                android:textSize="15dp" />
 
         </LinearLayout>
 
