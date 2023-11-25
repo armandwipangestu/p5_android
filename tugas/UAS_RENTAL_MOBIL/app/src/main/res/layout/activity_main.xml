@@ -16,38 +16,39 @@
         android:layout_marginTop="-30dp"
         android:layout_marginEnd="40dp"
         android:src="@drawable/rental_mobil_logo_mini"
-        android:transitionName="logo_image"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        android:transitionName="logo_image"
+        />
 
     <TextView
         android:id="@+id/title"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:fontFamily="@font/bangers"
         android:text="RENTAL MOBIL"
-        android:textAlignment="center"
         android:textColor="@color/white"
         android:textSize="50sp"
-        android:transitionName="text_title"
+        android:fontFamily="@font/bangers"
+        android:textAlignment="center"
         app:layout_constraintBottom_toBottomOf="@id/logo"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.932" />
+        app:layout_constraintVertical_bias="0.932"
+        android:transitionName="text_title"/>
 
     <TextView
         android:id="@+id/tagline"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:fontFamily="@font/poppins"
         android:text="Booking Lebih Mudah dan Praktis dimanapun!"
-        android:textAlignment="center"
         android:textColor="@color/white"
         android:textSize="15sp"
+        android:fontFamily="@font/poppins"
+        android:textAlignment="center"
         app:layout_constraintBottom_toBottomOf="@id/logo"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"

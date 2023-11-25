@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SignIn"
+    android:fillViewport="true"
+    android:background="@color/white">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="@color/white"
+        android:padding="20dp">
+
+        <ImageView
+            android:id="@+id/logo"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:src="@drawable/rental_mobil_logo_mini"
+            android:transitionName="logo_image"/>
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="RENTAL MOBIL"
+            android:textColor="@color/black"
+            android:textSize="40sp"
+            android:fontFamily="@font/bungee"
+            android:layout_marginTop="-20dp"
+            android:transitionName="text_title"/>
+
+        <TextView
+            android:id="@+id/tagline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Silahkan Masuk untuk Melanjutkan"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            android:fontFamily="@font/poppins"
+            android:transitionName="text_tagline"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:orientation="vertical">
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/username"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Username"
+                android:textColor="@color/black"
+                android:fontFamily="@font/poppins"
+                style="@style/Widget.Material3.TextInputLayout.OutlinedBox"
+                android:transitionName="input_username">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/password"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Password"
+                android:textColor="@color/black"
+                android:fontFamily="@font/poppins"
+                style="@style/Widget.Material3.TextInputLayout.OutlinedBox"
+                app:passwordToggleEnabled="true"
+                app:passwordToggleTint="@color/colorOnSurface"
+                android:transitionName="input_password">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textPassword"
+                    />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <Button
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:background="#00000000"
+                android:textColor="#000"
+                android:text="Lupa Password?"
+                android:fontFamily="@font/poppins"
+                android:layout_gravity="right"
+                android:elevation="0dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:paddingEnd="-50dp" />
+
+            <Button
+                android:id="@+id/signInButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/black"
+                android:textColor="@color/white"
+                android:text="Masuk"
+                android:fontFamily="@font/poppins"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:transitionName="action_button" />
+
+            <Button
+                android:id="@+id/signInToSignUpButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="#e2e8f0"
+                android:textColor="#94a3b8"
+                android:text="Belum mempunyai akun? Daftar disini"
+                android:fontFamily="@font/poppins"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:transitionName="action_button" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</ScrollView>
