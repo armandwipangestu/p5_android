@@ -18,6 +18,7 @@ import android.widget.Toast;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.android.material.textfield.TextInputLayout;
+import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
@@ -196,13 +197,13 @@ public class SignUp extends AppCompatActivity {
 
         Pair[] pairs = new Pair[7];
 
-        pairs[0] = new Pair<View,String>(logo, "logo_image");
-        pairs[1] = new Pair<View,String>(title, "text_title");
-        pairs[2] = new Pair<View,String>(tagline, "text_tagline");
-        pairs[3] = new Pair<View,String>(_REG_USERNAME_, "input_username");
-        pairs[4] = new Pair<View,String>(_REG_PASSWORD_, "input_password");
-        pairs[5] = new Pair<View,String>(signUpButton, "action_button");
-        pairs[6] = new Pair<View,String>(signUpToSignInButton, "change_view");
+        pairs[0] = new Pair<View, String>(logo, "logo_image");
+        pairs[1] = new Pair<View, String>(title, "text_title");
+        pairs[2] = new Pair<View, String>(tagline, "text_tagline");
+        pairs[3] = new Pair<View, String>(_REG_USERNAME_, "input_username");
+        pairs[4] = new Pair<View, String>(_REG_PASSWORD_, "input_password");
+        pairs[5] = new Pair<View, String>(signUpButton, "action_button");
+        pairs[6] = new Pair<View, String>(signUpToSignInButton, "change_view");
 
         ActivityOptions options = ActivityOptions.makeSceneTransitionAnimation(SignUp.this, pairs);
         startActivity(intent, options.toBundle());
