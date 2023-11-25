@@ -108,12 +108,13 @@
                 android:id="@+id/signInButton"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:backgroundTint="@color/black"
-                android:textColor="@color/white"
-                android:text="Masuk"
-                android:fontFamily="@font/poppins"
                 android:layout_marginTop="5dp"
                 android:layout_marginBottom="5dp"
+                android:backgroundTint="@color/black"
+                android:fontFamily="@font/poppins"
+                android:onClick="signInButtonClick"
+                android:text="Masuk"
+                android:textColor="@color/white"
                 android:transitionName="action_button" />
 
             <Button
