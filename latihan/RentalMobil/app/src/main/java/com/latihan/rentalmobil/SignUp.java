@@ -55,6 +55,7 @@ public class SignUp extends AppCompatActivity {
             public void onClick(View v) {
                 Intent intent = new Intent(SignUp.this, Login.class);
                 startActivity(intent);
+                finish();
             }
         });
     }
@@ -167,7 +168,7 @@ public class SignUp extends AppCompatActivity {
         String userId = username + '_' + reference.push().getKey();
 
         UserHelperClass helperClass = new UserHelperClass(namaLengkap, username, email, noTelepon, password);
-        reference.child(userId).setValue(helperClass).addOnCompleteListener(new OnCompleteListener<Void>() {
+        reference.child(username).setValue(helperClass).addOnCompleteListener(new OnCompleteListener<Void>() {
             @Override
             public void onComplete(@NonNull Task<Void> task) {
                 if (task.isSuccessful()) {
@@ -189,5 +190,20 @@ public class SignUp extends AppCompatActivity {
                 regPassword.getEditText().setText("");
             }
         });
+    }
+
+    private static final int TIME_INTERVAL = 2000; // Waktu interval antara dua kali tekan back (dalam milidetik)
+    private long backPressedTime = 0;
+
+    @Override
+    public void onBackPressed() {
+        if (backPressedTime + TIME_INTERVAL > System.currentTimeMillis()) {
+            // Jika selisih waktu antara dua kali tekan back cukup kecil, maka keluar dari aplikasi
+            super.onBackPressed();
+        } else {
+            Toast.makeText(getBaseContext(), "Tekan kembali sekali lagi untuk keluar", Toast.LENGTH_SHORT).show();
+        }
+
+        backPressedTime = System.currentTimeMillis();
     }
 }

@@ -104,13 +104,13 @@
                 android:id="@+id/login_button"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Masuk"
-                android:textColor="#fff"
                 android:layout_marginTop="5dp"
                 android:layout_marginBottom="5dp"
                 android:fontFamily="@font/poppins"
-                android:transitionName="action_transition"
-                />
+                android:onClick="loginUser"
+                android:text="Masuk"
+                android:textColor="#fff"
+                android:transitionName="action_transition" />
 
             <Button
                 android:id="@+id/daftar"
