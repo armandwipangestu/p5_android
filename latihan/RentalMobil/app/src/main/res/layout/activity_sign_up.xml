@@ -1,148 +1,160 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:fillViewport="true"
     android:background="@color/white"
+    android:fillViewport="true"
     tools:context=".SignUp">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        tools:context=".SignUp"
         android:orientation="vertical"
-        android:padding="20dp">
+        android:padding="20dp"
+        tools:context=".SignUp">
 
         <ImageView
             android:layout_width="150dp"
             android:layout_height="150dp"
             android:src="@drawable/rental_mobil_logo_mini"
-            android:transitionName="logo_image"
-            />
+            android:transitionName="logo_image" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="RENTAL MOBIL"
-            android:textSize="40sp"
-            android:fontFamily="@font/bungee"
-            android:textColor="@color/black"
             android:layout_marginTop="-20dp"
-            android:transitionName="text_title"
-            />
+            android:fontFamily="@font/bungee"
+            android:text="RENTAL MOBIL"
+            android:textColor="@color/black"
+            android:textSize="40sp"
+            android:transitionName="text_title" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Silahkan Daftar untuk Memulai"
-            android:textSize="18sp"
             android:fontFamily="@font/poppins"
+            android:text="Silahkan Daftar untuk Memulai"
             android:textColor="@color/black"
-            android:transitionName="text_tagline"
-            />
+            android:textSize="18sp"
+            android:transitionName="text_tagline" />
+
+        <LinearLayout
+            android:id="@+id/registrationStatusLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <!-- Komponen baru untuk menampilkan status pendaftaran -->
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp">
+
+                <TextView
+                    android:id="@+id/registrationStatusText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="Pendaftaran gagal!"
+                    android:textColor="@android:color/white" />
+
+            </FrameLayout>
+        </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
             android:layout_marginTop="20dp"
-            android:layout_marginBottom="20dp">
+            android:layout_marginBottom="20dp"
+            android:orientation="vertical">
 
             <com.google.android.material.textfield.TextInputLayout
                 android:id="@+id/nama_lengkap"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
                 style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-                >
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:fontFamily="@font/poppins"
                     android:hint="Nama Lengkap"
                     android:inputType="text"
-                    android:textColor="@color/black"
-                    android:fontFamily="@font/poppins"
-                    />
+                    android:textColor="@color/black" />
 
             </com.google.android.material.textfield.TextInputLayout>
 
             <com.google.android.material.textfield.TextInputLayout
                 android:id="@+id/username"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-                app:counterEnabled="true"
-                app:counterMaxLength="15"
-                android:transitionName="username_transition"
-                >
+                android:transitionName="username_transition">
+
+                <!--                app:counterEnabled="true"-->
+                <!--                app:counterMaxLength="15"-->
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:fontFamily="@font/poppins"
                     android:hint="Username"
                     android:inputType="text"
-                    android:textColor="@color/black"
-                    android:fontFamily="@font/poppins"
-                    />
+                    android:textColor="@color/black" />
 
             </com.google.android.material.textfield.TextInputLayout>
 
             <com.google.android.material.textfield.TextInputLayout
                 android:id="@+id/email"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
                 style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-                >
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:fontFamily="@font/poppins"
                     android:hint="Email"
                     android:inputType="textEmailAddress"
-                    android:textColor="@color/black"
-                    android:fontFamily="@font/poppins"
-                    />
+                    android:textColor="@color/black" />
 
             </com.google.android.material.textfield.TextInputLayout>
 
             <com.google.android.material.textfield.TextInputLayout
                 android:id="@+id/no_telepon"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-                android:transitionName="password_transition"
-                >
+                android:transitionName="password_transition">
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:fontFamily="@font/poppins"
                     android:hint="No Telepon"
                     android:inputType="number"
-                    android:textColor="@color/black"
-                    android:fontFamily="@font/poppins"
-                    />
+                    android:textColor="@color/black" />
 
             </com.google.android.material.textfield.TextInputLayout>
 
             <com.google.android.material.textfield.TextInputLayout
                 android:id="@+id/password"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                 app:passwordToggleEnabled="true"
-                app:passwordToggleTint="@color/colorOnSurface"
-                >
+                app:passwordToggleTint="@color/colorOnSurface">
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:inputType="textPassword"
                     android:fontFamily="@font/poppins"
                     android:hint="Password"
-                    android:textColor="@color/black"/>
+                    android:inputType="textPassword"
+                    android:textColor="@color/black" />
 
             </com.google.android.material.textfield.TextInputLayout>
 
@@ -152,22 +164,21 @@
             android:id="@+id/reg_btn"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:fontFamily="@font/poppins"
+            android:onClick="registerUser"
             android:text="Daftar"
             android:textColor="@color/white"
-            android:fontFamily="@font/poppins"
-            android:transitionName="action_transition"
-            />
+            android:transitionName="action_transition" />
 
         <Button
             android:id="@+id/daftarToLogin"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Sudah mempunyai akun? Login disini"
             android:background="#00000000"
-            android:textColor="#000"
             android:fontFamily="@font/poppins"
-            android:transitionName="login_signup_transition"
-            />
+            android:text="Sudah mempunyai akun? Login disini"
+            android:textColor="#000"
+            android:transitionName="login_signup_transition" />
 
     </LinearLayout>
 
