@@ -30,10 +30,6 @@ public class ListCar extends BaseActivity {
         super.onCreate(savedInstanceState);
         // Hooks
         namaLengkap = findViewById(R.id.namaLengkap);
-        username = findViewById(R.id.username);
-        email = findViewById(R.id.email);
-        noTelepon = findViewById(R.id.noTelepon);
-        password = findViewById(R.id.password);
 
         // Connect to Database or Node Firebase
         database = FirebaseDatabase.getInstance("https://uas---rental-mobil-default-rtdb.asia-southeast1.firebasedatabase.app/");
@@ -74,11 +70,7 @@ public class ListCar extends BaseActivity {
                         _NO_TELEPON_ = snapshot.child(_USERNAME_).child("noTelepon").getValue(String.class);
                         _PASSWORD_ = snapshot.child(_USERNAME_).child("password").getValue(String.class);
 
-                        namaLengkap.setText(_NAMA_LENGKAP_);
-                        username.setText(_USERNAME_);
-                        email.setText(_EMAIL_);
-                        noTelepon.setText(_NO_TELEPON_);
-                        password.setText(_PASSWORD_);
+                        namaLengkap.setText("Hi, " + _NAMA_LENGKAP_);
                 }
             }
 
