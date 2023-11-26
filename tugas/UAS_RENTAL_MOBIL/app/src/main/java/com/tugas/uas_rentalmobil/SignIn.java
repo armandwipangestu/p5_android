@@ -142,17 +142,20 @@ public class SignIn extends AppCompatActivity {
                         SharedPreferences.Editor editor = preferences.edit();
                         editor.putString("namaLengkap", namaLengkapFromDB);
                         editor.putString("username", usernameFromDB);
+                        editor.putString("email", emailFromDB);
+                        editor.putString("noTelepon", noTeleponFromDB);
+                        editor.putString("password", passwordFromDB);
                         editor.apply();
 
                         // Prepare Dashboard View
                         Intent intent = new Intent(SignIn.this, ListCar.class);
 
                         // Send all data from DB to Dashboard
-                        intent.putExtra("namaLengkap", namaLengkapFromDB);
-                        intent.putExtra("username", usernameFromDB);
-                        intent.putExtra("email", emailFromDB);
-                        intent.putExtra("noTelepon", noTeleponFromDB);
-                        intent.putExtra("password", passwordFromDB);
+                        //intent.putExtra("namaLengkap", namaLengkapFromDB);
+                        //intent.putExtra("username", usernameFromDB);
+                        //intent.putExtra("email", emailFromDB);
+                        //intent.putExtra("noTelepon", noTeleponFromDB);
+                        //intent.putExtra("password", passwordFromDB);
 
                         // Change to Dashboard View
                         startActivity(intent);
