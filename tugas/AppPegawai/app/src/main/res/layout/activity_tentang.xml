@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Tentang"
+    android:padding="20dp"
+    android:background="@color/white"
+    android:scrollbars="none">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginBottom="20dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/neo_brutalism_blue">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="TENTANG APLIKASI"
+                android:textSize="10pt"
+                android:fontFamily="@font/poppins_bold"
+                android:textColor="@color/black"
+                android:textAlignment="center" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/neo_brutalism_green">
+
+            <TextView
+                android:id="@+id/appLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="15dp"
+                android:fontFamily="@font/poppins_bold"
+                android:includeFontPadding="false"
+                android:text="Salary App v1.0"
+                android:textColor="@color/black"
+                android:textSize="15sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="15dp"
+                android:layout_marginBottom="15dp"
+                android:fontFamily="@font/poppins"
+                android:text="By: Arman Dwi Pangestu"
+                android:textColor="@color/black"
+                android:textSize="10sp"
+                android:includeFontPadding="false" />
+
+            <ImageView
+                android:layout_width="130dp"
+                android:layout_height="170dp"
+                android:layout_marginBottom="10dp"
+                android:src="@drawable/me"
+                android:layout_alignParentRight="true" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="1500dp"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/neo_brutalism_yellow"
+            android:paddingBottom="20dp">
+
+            <TextView
+                android:id="@+id/tvPenjelasanJava"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="15dp"
+                android:fontFamily="@font/poppins_bold"
+                android:text="Penjelasan Java:"
+                android:textColor="@color/black"
+                android:textSize="8pt" />
+
+            <TextView
+                android:id="@+id/tvDetailJava"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tvPenjelasanJava"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="15dp"
+                android:paddingRight="40dp"
+                android:fontFamily="@font/poppins"
+                android:text="@string/penjelasan_java"
+                android:textColor="@color/black"
+                android:textSize="8pt" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentRight="true"
+                android:paddingEnd="25dp"
+                android:layout_marginBottom="15dp"
+                android:fontFamily="@font/poppins_bold"
+                android:text="Sumber: Wikipedia"
+                android:textColor="@color/black"
+                android:textSize="8pt"
+                android:includeFontPadding="false"
+                tools:ignore="RtlSymmetry" />
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</ScrollView>

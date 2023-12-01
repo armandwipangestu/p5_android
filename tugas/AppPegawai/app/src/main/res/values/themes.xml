@@ -1,0 +1,20 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.AppPegawai" parent="Theme.Material3.DayNight.NoActionBar">
+        <!-- Customize your light theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorOnSurface">@color/colorOnSurface</item>
+        <item name="colorSecondary">@color/colorSecondary</item>
+        <item name="android:windowContentTransitions">true</item>
+    </style>
+    <style name="Theme.AppPegawai" parent="Base.Theme.AppPegawai" />
+    <!-- on below line creating a theme for our Alert Dialog -->
+    <style name="AlertDialogCustom" parent="@style/MaterialAlertDialog.Material3">
+        <!-- on below line adding text color for our text in alert dialog -->
+        <item name="android:textColor">@color/white</item>
+        <!-- on below line adding typeface for alert dialog text -->
+        <item name="android:typeface">monospace</item>
+        <!-- on below line setting text size for text -->
+        <item name="android:textSize">20sp</item>
+    </style>
+</resources>
