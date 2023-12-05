@@ -24,7 +24,7 @@
                 android:layout_marginTop="5dp"
                 android:layout_marginBottom="5dp"
                 android:elevation="0dp"
-                android:src="@drawable/avatar_image" />
+                android:src="@drawable/me_circle" />
 
             <TextView
                 android:id="@+id/namaLengkap"
@@ -34,16 +34,48 @@
                 android:layout_marginTop="5dp"
                 android:elevation="0dp"
                 android:fontFamily="@font/poppins_medium"
-                android:text="Hi, User"
+                android:text="Hi, "
                 android:textColor="@color/black"
                 android:textSize="25sp" />
 
-            <com.google.android.material.search.SearchBar
+<!--            <com.google.android.material.search.SearchBar-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_marginTop="10dp"-->
+<!--                android:hint="Cari mobil disini"-->
+<!--                app:backgroundTint="#e2e8f0" />-->
+
+            <RelativeLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="50dp"
+                android:background="@drawable/search_background"
                 android:layout_marginTop="10dp"
-                android:hint="Cari mobil disini"
-                app:backgroundTint="#e2e8f0" />
+                android:layout_marginBottom="10dp">
+
+                <ImageView
+                    android:id="@+id/searchIcon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/baseline_search_24"
+                    android:layout_marginLeft="10dp"
+                    android:layout_centerVertical="true" />
+
+                <EditText
+                    android:id="@+id/search"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@id/searchIcon"
+                    android:layout_marginLeft="5dp"
+                    android:hint="Cari mobil disini"
+                    android:textColorHint="#888"
+                    android:textColor="#000000"
+                    android:fontFamily="@font/poppins"
+                    android:textSize="15sp"
+                    android:layout_centerVertical="true"
+                    android:background="@null"
+                    />
+
+            </RelativeLayout>
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
@@ -64,13 +96,14 @@
                         <Button
                             android:id="@+id/button1"
                             android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
+                            android:layout_height="50dp"
                             android:layout_margin="5dp"
                             android:layout_weight="1"
                             android:text="Toyota"
-                            android:backgroundTint="#0f172a"
+                            android:backgroundTint="#e2e8f0"
                             android:fontFamily="@font/poppins"
-                            android:textColor="#fff"/>
+                            android:includeFontPadding="false"
+                            android:textColor="#444"/>
 
                         <Button
                             android:id="@+id/button2"
@@ -277,15 +310,17 @@
 
                 <Button
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_height="45dp"
                     android:layout_alignParentBottom="true"
                     android:layout_marginStart="15dp"
                     android:layout_marginTop="15dp"
                     android:layout_marginEnd="15dp"
                     android:layout_marginBottom="15dp"
-                    android:backgroundTint="@color/black"
+                    android:backgroundTint="#000"
                     android:text="Rp. 100.000 / Hari"
-                    android:textColor="@color/white" />
+                    android:textColor="@color/white"
+                    android:textSize="10sp"
+                    android:includeFontPadding="false"/>
 
                 <ImageView
                     android:layout_width="170dp"
@@ -329,15 +364,17 @@
 
                 <Button
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_height="45dp"
                     android:layout_alignParentBottom="true"
                     android:layout_marginStart="15dp"
                     android:layout_marginTop="15dp"
                     android:layout_marginEnd="15dp"
                     android:layout_marginBottom="15dp"
-                    android:backgroundTint="@color/black"
+                    android:backgroundTint="#000"
                     android:text="Rp. 200.000 / Hari"
-                    android:textColor="@color/white" />
+                    android:textColor="@color/white"
+                    android:textSize="10sp"
+                    android:includeFontPadding="false"/>
 
                 <ImageView
                     android:layout_width="170dp"
@@ -382,12 +419,13 @@
 
                 <Button
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_height="45dp"
                     android:text="Rp. 500.000 / Hari"
                     android:backgroundTint="@color/black"
                     android:textColor="@color/white"
                     android:layout_alignParentBottom="true"
-                    android:layout_margin="15dp" />
+                    android:layout_margin="15dp"
+                    android:textSize="10sp"/>
 
                 <ImageView
                     android:layout_width="170dp"
