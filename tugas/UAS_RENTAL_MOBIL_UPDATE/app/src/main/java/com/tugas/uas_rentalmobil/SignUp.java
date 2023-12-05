@@ -12,6 +12,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -30,7 +31,8 @@ public class SignUp extends AppCompatActivity {
     LinearLayout registrationStatusLayout;
     TextView registrationStatusText;
     TextInputLayout _REG_NAMA_LENGKAP_, _REG_USERNAME_, _REG_EMAIL_, _REG_NO_TELEPON_, _REG_PASSWORD_;
-    Button signUpButton, signUpToSignInButton;
+    Button signUpToSignInButton;
+    RelativeLayout signUpButton;
 
     FirebaseDatabase database;
     DatabaseReference reference;
@@ -173,11 +175,13 @@ public class SignUp extends AppCompatActivity {
             public void onComplete(@NonNull Task<Void> task) {
                 if (task.isSuccessful()) {
                     Toast.makeText(getBaseContext(), "Pendaftaran berhasil, silahkan masuk!", Toast.LENGTH_SHORT).show();
-                    registrationStatusLayout.setBackgroundColor(Color.parseColor("#22c55e"));
+                    //registrationStatusLayout.setBackgroundColor(Color.parseColor("#22c55e"));
+                    registrationStatusLayout.setBackgroundResource(R.drawable.neo_brutalism_green);
                     registrationStatusText.setText("Pendaftaran berhasil, silahkan masuk!");
                 } else {
                     Toast.makeText(getBaseContext(), "Pendaftaran gagal!", Toast.LENGTH_SHORT).show();
-                    registrationStatusLayout.setBackgroundColor(Color.parseColor("#ef4444"));
+                    //registrationStatusLayout.setBackgroundColor(Color.parseColor("#ef4444"));
+                    registrationStatusLayout.setBackgroundResource(R.drawable.neo_brutalism_red);
                     registrationStatusText.setText("Pendaftaran gagal!");
                 }
 

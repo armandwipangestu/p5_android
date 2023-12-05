@@ -4,6 +4,7 @@ import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -14,6 +15,7 @@ import com.google.firebase.database.FirebaseDatabase;
 public class Profile extends BaseActivity {
 
     TextInputLayout nama_lengkap, email, noTelepon, password;
+    ImageView avatar_image;
     TextView namalengkaplabel, usernamelabel;
     //global
     String NAMA_LENGKAP, USERNAME, EMAIL, NO_TELEPON, PASSWORD;
@@ -27,6 +29,7 @@ public class Profile extends BaseActivity {
         //setContentView(R.layout.activity_profile);
 
         //hooks
+        avatar_image = findViewById(R.id.avatar_image);
         nama_lengkap = findViewById(R.id.nama_lengkap_profile);
         email = findViewById(R.id.email_profile);
         noTelepon = findViewById(R.id.no_telepon_profile);
@@ -61,11 +64,17 @@ public class Profile extends BaseActivity {
         EMAIL = preferences.getString("email", "");
 
         namalengkaplabel.setText(NAMA_LENGKAP);
-        usernamelabel.setText(USERNAME);
+        usernamelabel.setText("@" + USERNAME);
         nama_lengkap.getEditText().setText(NAMA_LENGKAP);
         email.getEditText().setText(EMAIL);
         noTelepon.getEditText().setText(NO_TELEPON);
         password.getEditText().setText(PASSWORD);
+
+        if (!USERNAME.equals("arman")) {
+            avatar_image.setImageDrawable(getResources().getDrawable(R.drawable.avatar_image_female));
+        } else {
+            avatar_image.setImageDrawable(getResources().getDrawable(R.drawable.me_circle));
+        }
     }
 
     public void update(View view) {

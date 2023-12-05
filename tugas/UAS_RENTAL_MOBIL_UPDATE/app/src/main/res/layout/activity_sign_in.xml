@@ -17,7 +17,8 @@
         <ImageView
             android:id="@+id/logo"
             android:layout_width="150dp"
-            android:layout_height="150dp"
+            android:layout_height="100dp"
+            android:layout_marginTop="40dp"
             android:src="@drawable/rental_mobil_logo_mini"
             android:transitionName="logo_image"/>
 
@@ -104,18 +105,27 @@
                 android:layout_marginBottom="5dp"
                 android:paddingEnd="-50dp" />
 
-            <Button
+            <RelativeLayout
                 android:id="@+id/signInButton"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="5dp"
                 android:layout_marginBottom="5dp"
-                android:backgroundTint="@color/black"
-                android:fontFamily="@font/poppins"
-                android:onClick="signInButtonClick"
-                android:text="Masuk"
-                android:textColor="@color/white"
-                android:transitionName="action_button" />
+                android:paddingBottom="15dp"
+                android:background="@drawable/neo_brutalism_yellow"
+                android:onClick="signInButtonClick">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="15dp"
+                    android:fontFamily="@font/poppins_bold"
+                    android:text="Masuk"
+                    android:textColor="@color/black"
+                    android:textSize="8pt"
+                    android:layout_centerHorizontal="true"/>
+
+            </RelativeLayout>
 
             <Button
                 android:id="@+id/signInToSignUpButton"

@@ -11,6 +11,7 @@ import android.util.Pair;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -32,7 +33,8 @@ public class SignIn extends AppCompatActivity {
     DatabaseReference reference;
 
     TextInputLayout username, password;
-    Button signInButton, signInToSignUpButton;
+    Button signInToSignUpButton;
+    RelativeLayout signInButton;
 
     private static final int _TIME_INTERVAL = 2000; // time for between 2x when press back (in miliseconds)
     private long backPressedTime = 0; // initialize back press

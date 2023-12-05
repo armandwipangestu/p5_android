@@ -3,6 +3,7 @@ package com.tugas.uas_rentalmobil;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -18,6 +19,7 @@ public class ListCar extends BaseActivity {
 
     // Variables
     TextView namaLengkap, username, email, noTelepon, password;
+    ImageView avatarImage;
 
     // Global Variables to hold user data inside this activity
     String _NAMA_LENGKAP_, _USERNAME_, _EMAIL_, _NO_TELEPON_, _PASSWORD_;
@@ -30,6 +32,7 @@ public class ListCar extends BaseActivity {
         super.onCreate(savedInstanceState);
         // Hooks
         namaLengkap = findViewById(R.id.namaLengkap);
+        avatarImage = findViewById(R.id.avatarImage);
 
         // Connect to Database or Node Firebase
         database = FirebaseDatabase.getInstance("https://uas---rental-mobil-default-rtdb.asia-southeast1.firebasedatabase.app/");
@@ -65,12 +68,18 @@ public class ListCar extends BaseActivity {
             public void onDataChange(@NonNull DataSnapshot snapshot) {
                 // Check if data exist by username input
                 if (snapshot.exists()) {
-                        // Get all data from DB
-                        _EMAIL_ = snapshot.child(_USERNAME_).child("email").getValue(String.class);
-                        _NO_TELEPON_ = snapshot.child(_USERNAME_).child("noTelepon").getValue(String.class);
-                        _PASSWORD_ = snapshot.child(_USERNAME_).child("password").getValue(String.class);
+                    // Get all data from DB
+                    _EMAIL_ = snapshot.child(_USERNAME_).child("email").getValue(String.class);
+                    _NO_TELEPON_ = snapshot.child(_USERNAME_).child("noTelepon").getValue(String.class);
+                    _PASSWORD_ = snapshot.child(_USERNAME_).child("password").getValue(String.class);
 
-                        namaLengkap.setText("Hi, " + _NAMA_LENGKAP_);
+                    namaLengkap.setText("Hi, " + _NAMA_LENGKAP_);
+
+                    if (!snapshot.child(_USERNAME_).child("username").getValue(String.class).equals("arman")) {
+                        avatarImage.setImageDrawable(getResources().getDrawable(R.drawable.avatar_image_female));
+                    } else {
+                        avatarImage.setImageDrawable(getResources().getDrawable(R.drawable.me_circle));
+                    }
                 }
             }
 
