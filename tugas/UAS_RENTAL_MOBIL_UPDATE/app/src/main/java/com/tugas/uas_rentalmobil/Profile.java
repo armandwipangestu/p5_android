@@ -52,7 +52,7 @@ public class Profile extends BaseActivity {
         nama_lengkap = findViewById(R.id.nama_lengkap_profile);
         email = findViewById(R.id.email_profile);
         noTelepon = findViewById(R.id.no_telepon_profile);
-        password = findViewById(R.id.password);
+        password = findViewById(R.id.password_profile);
         namalengkaplabel = findViewById(R.id.nama_lengkap);
         usernamelabel = findViewById(R.id.username);
 
@@ -85,7 +85,7 @@ public class Profile extends BaseActivity {
     }
     public void update(View view) {
 
-        if (isNameChanged() || isPasswordChange() || isEmailChange()) {
+        if (isNameChanged() || isEmailChange() || isPasswordChange()) {
             Toast.makeText(this, "Data Has been update", Toast.LENGTH_LONG).show();
         } else {
             Toast.makeText(this, "Data is and can not be update", Toast.LENGTH_LONG).show();
