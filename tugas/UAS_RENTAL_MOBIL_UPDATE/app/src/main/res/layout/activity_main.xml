@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#337DFE"
+    android:background="#FEE858"
     tools:context=".MainActivity"
     >
 
@@ -28,7 +28,7 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:text="RENTAL MOBIL"
-        android:textColor="@color/white"
+        android:textColor="@color/black"
         android:textSize="50sp"
         android:fontFamily="@font/bangers"
         android:textAlignment="center"
@@ -45,7 +45,7 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:text="Booking Lebih Mudah dan Praktis dimanapun!"
-        android:textColor="@color/white"
+        android:textColor="@color/black"
         android:textSize="15sp"
         android:fontFamily="@font/poppins"
         android:textAlignment="center"

@@ -47,8 +47,8 @@
 
             <RelativeLayout
                 android:layout_width="match_parent"
-                android:layout_height="50dp"
-                android:background="@drawable/search_background"
+                android:layout_height="55dp"
+                android:background="@drawable/neo_brutalism_gray"
                 android:layout_marginTop="10dp"
                 android:layout_marginBottom="10dp">
 
@@ -58,7 +58,8 @@
                     android:layout_height="wrap_content"
                     android:src="@drawable/baseline_search_24"
                     android:layout_marginLeft="10dp"
-                    android:layout_centerVertical="true" />
+                    android:layout_centerVertical="true"
+                    />
 
                 <EditText
                     android:id="@+id/search"
@@ -276,14 +277,66 @@
                 android:textColor="@color/black"
                 android:textSize="15sp" />
 
+            <!-- Toyota Supra -->
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="150dp"
                 android:layout_marginTop="15dp"
-                android:background="@drawable/car_background">
+                android:background="@drawable/neo_brutalism_yellow">
 
                 <TextView
-                    android:id="@+id/carLabel"
+                    android:id="@+id/carLabel1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Toyota Supra"
+                    android:textSize="15sp"
+                    android:fontFamily="@font/poppins_bold"
+                    android:textColor="@color/black"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginStart="15dp"
+                    android:includeFontPadding="false"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/carLabel1"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginEnd="15dp"
+                    android:layout_marginBottom="15dp"
+                    android:fontFamily="@font/poppins"
+                    android:text="Automatic / Manual"
+                    android:textColor="@color/black"
+                    android:textSize="10sp"
+                    android:includeFontPadding="false" />
+
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="45dp"
+                    android:text="Rp. 500.000 / Hari"
+                    android:backgroundTint="@color/black"
+                    android:textColor="@color/white"
+                    android:layout_alignParentBottom="true"
+                    android:layout_margin="15dp"
+                    android:textSize="10sp"/>
+
+                <ImageView
+                    android:layout_width="170dp"
+                    android:layout_height="170dp"
+                    android:src="@drawable/supra"
+                    android:layout_alignParentRight="true" />
+
+            </RelativeLayout>
+
+            <!-- Toyota Alphard -->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:layout_marginTop="15dp"
+                android:background="@drawable/neo_brutalism_yellow">
+
+                <TextView
+                    android:id="@+id/carLabel2"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="15dp"
@@ -297,7 +350,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_below="@id/carLabel"
+                    android:layout_below="@id/carLabel2"
                     android:layout_marginStart="15dp"
                     android:layout_marginTop="5dp"
                     android:layout_marginEnd="15dp"
@@ -330,14 +383,15 @@
 
             </RelativeLayout>
 
+            <!-- Toyota Hilux -->
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="150dp"
                 android:layout_marginTop="15dp"
-                android:background="@drawable/car_background">
+                android:background="@drawable/neo_brutalism_yellow">
 
                 <TextView
-                    android:id="@+id/carLabel2"
+                    android:id="@+id/carLabel3"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Toyota Hilux"
@@ -351,7 +405,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_below="@id/carLabel2"
+                    android:layout_below="@id/carLabel3"
                     android:layout_marginStart="15dp"
                     android:layout_marginTop="5dp"
                     android:layout_marginEnd="15dp"
@@ -384,18 +438,18 @@
 
             </RelativeLayout>
 
+            <!-- Toyota Yaris -->
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="150dp"
                 android:layout_marginTop="15dp"
-                android:layout_marginBottom="100dp"
-                android:background="@drawable/car_background">
+                android:background="@drawable/neo_brutalism_yellow">
 
                 <TextView
-                    android:id="@+id/carLabel3"
+                    android:id="@+id/carLabel4"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Toyota Supra"
+                    android:text="Toyota Yaris"
                     android:textSize="15sp"
                     android:fontFamily="@font/poppins_bold"
                     android:textColor="@color/black"
@@ -406,7 +460,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_below="@id/carLabel3"
+                    android:layout_below="@id/carLabel4"
                     android:layout_marginStart="15dp"
                     android:layout_marginTop="5dp"
                     android:layout_marginEnd="15dp"
@@ -420,17 +474,77 @@
                 <Button
                     android:layout_width="wrap_content"
                     android:layout_height="45dp"
-                    android:text="Rp. 500.000 / Hari"
-                    android:backgroundTint="@color/black"
-                    android:textColor="@color/white"
                     android:layout_alignParentBottom="true"
-                    android:layout_margin="15dp"
-                    android:textSize="10sp"/>
+                    android:layout_marginStart="15dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginEnd="15dp"
+                    android:layout_marginBottom="15dp"
+                    android:backgroundTint="#000"
+                    android:text="Rp. 150.000 / Hari"
+                    android:textColor="@color/white"
+                    android:textSize="10sp"
+                    android:includeFontPadding="false"/>
 
                 <ImageView
                     android:layout_width="170dp"
                     android:layout_height="170dp"
-                    android:src="@drawable/supra"
+                    android:src="@drawable/yaris"
+                    android:layout_alignParentRight="true" />
+
+            </RelativeLayout>
+
+            <!-- Toyota Hiace -->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginBottom="100dp"
+                android:background="@drawable/neo_brutalism_yellow">
+
+                <TextView
+                    android:id="@+id/carLabel5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Toyota Hiace"
+                    android:textSize="15sp"
+                    android:fontFamily="@font/poppins_bold"
+                    android:textColor="@color/black"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginStart="15dp"
+                    android:includeFontPadding="false"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/carLabel5"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginEnd="15dp"
+                    android:layout_marginBottom="15dp"
+                    android:fontFamily="@font/poppins"
+                    android:text="Automatic / Manual"
+                    android:textColor="@color/black"
+                    android:textSize="10sp"
+                    android:includeFontPadding="false" />
+
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="45dp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginEnd="15dp"
+                    android:layout_marginBottom="15dp"
+                    android:backgroundTint="#000"
+                    android:text="Rp. 100.000 / Hari"
+                    android:textColor="@color/white"
+                    android:textSize="10sp"
+                    android:includeFontPadding="false"/>
+
+                <ImageView
+                    android:layout_width="170dp"
+                    android:layout_height="170dp"
+                    android:src="@drawable/hiace"
                     android:layout_alignParentRight="true" />
 
             </RelativeLayout>

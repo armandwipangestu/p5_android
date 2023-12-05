@@ -22,7 +22,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="300dp"
                 android:padding="20dp"
-                android:background="#337DFE">
+                android:background="#FEE858">
 
                 <ImageView
                     android:id="@+id/avatar_image"
@@ -42,7 +42,7 @@
                     android:layout_centerVertical="true"
                     android:includeFontPadding="false"
                     android:layout_marginLeft="10dp"
-                    android:textColor="@color/white"/>
+                    android:textColor="@color/black"/>
 
                 <TextView
                     android:id="@+id/username"
@@ -55,7 +55,7 @@
                     android:layout_below="@id/nama_lengkap"
                     android:includeFontPadding="false"
                     android:layout_marginLeft="10dp"
-                    android:textColor="@color/white"/>
+                    android:textColor="@color/black"/>
 
             </RelativeLayout>
 
@@ -70,9 +70,9 @@
                     android:layout_height="125dp"
                     android:layout_weight="1"
                     android:layout_margin="10dp"
-                    app:cardBackgroundColor="#337DFE"
+                    app:cardBackgroundColor="#FEE858"
                     app:cardElevation="10dp"
-                    app:strokeColor="#337DFE"
+                    app:strokeColor="#FEE858"
                     app:cardCornerRadius="5dp">
 
                     <RelativeLayout
@@ -95,7 +95,7 @@
                             android:textSize="20sp"
                             android:fontFamily="@font/poppins"
                             android:layout_centerInParent="true"
-                            android:textColor="@color/white"/>
+                            android:textColor="@color/black"/>
 
                         <TextView
                             android:id="@+id/coin_desc"
@@ -107,7 +107,7 @@
                             android:fontFamily="@font/poppins"
                             android:layout_below="@id/coin_label"
                             android:layout_centerHorizontal="true"
-                            android:textColor="@color/white"/>
+                            android:textColor="@color/black"/>
 
                     </RelativeLayout>
 
@@ -118,9 +118,9 @@
                     android:layout_height="125dp"
                     android:layout_weight="1"
                     android:layout_margin="10dp"
-                    app:cardBackgroundColor="#337DFE"
+                    app:cardBackgroundColor="#FEE858"
                     app:cardElevation="10dp"
-                    app:strokeColor="#337DFE"
+                    app:strokeColor="#FEE858"
                     app:cardCornerRadius="5dp">
 
                     <RelativeLayout
@@ -143,7 +143,7 @@
                             android:textSize="20sp"
                             android:fontFamily="@font/poppins"
                             android:layout_centerInParent="true"
-                            android:textColor="@color/white"/>
+                            android:textColor="@color/black"/>
 
                         <TextView
                             android:id="@+id/booking_desc"
@@ -155,7 +155,7 @@
                             android:fontFamily="@font/poppins"
                             android:layout_below="@id/booking_label"
                             android:layout_centerHorizontal="true"
-                            android:textColor="@color/white"/>
+                            android:textColor="@color/black"/>
 
                     </RelativeLayout>
 
@@ -255,11 +255,11 @@
                 <Button
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:backgroundTint="#337DFE"
+                    android:backgroundTint="#FEE858"
                     android:fontFamily="@font/poppins"
                     android:onClick="update"
                     android:text="Perbarui"
-                    android:textColor="@color/white"
+                    android:textColor="@color/black"
                     android:textSize="15dp" />
 
             </LinearLayout>
