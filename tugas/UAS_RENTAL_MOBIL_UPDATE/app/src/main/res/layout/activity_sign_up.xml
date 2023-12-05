@@ -201,7 +201,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="15dp"
                 android:fontFamily="@font/poppins_bold"
-                android:text="Masuk"
+                android:text="Daftar"
                 android:textColor="@color/black"
                 android:textSize="8pt"
                 android:layout_centerHorizontal="true"/>
