@@ -22,6 +22,9 @@ public class Profile extends BaseActivity {
     FirebaseDatabase database;
     DatabaseReference reference;
 
+    private static final int _TIME_INTERVAL = 2000; // time for between 2x when press back (in miliseconds)
+    private long backPressedTime = 0; // initialize back press
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -121,6 +124,17 @@ public class Profile extends BaseActivity {
         }
 
         return dataChanged;
+    }
+
+    @Override
+    public void onBackPressed() {
+        if (backPressedTime + _TIME_INTERVAL > System.currentTimeMillis()) {
+            super.onBackPressed();
+        } else {
+            Toast.makeText(getBaseContext(), "Tekan tombol kembali lagi untuk keluar", Toast.LENGTH_SHORT).show();
+        }
+
+        backPressedTime = System.currentTimeMillis();
     }
 
 }
