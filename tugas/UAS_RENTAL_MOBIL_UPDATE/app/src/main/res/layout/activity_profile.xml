@@ -28,14 +28,14 @@
                     android:id="@+id/avatar_image"
                     android:layout_width="100dp"
                     android:layout_height="100dp"
-                    android:src="@drawable/avatar_image"
+                    android:src="@drawable/me_circle"
                     android:layout_centerVertical="true"/>
 
                 <TextView
                     android:id="@+id/nama_lengkap"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Arman Dwi Pangestu"
+                    android:text=""
                     android:textSize="20sp"
                     android:fontFamily="@font/bungee"
                     android:layout_toRightOf="@id/avatar_image"
@@ -48,8 +48,9 @@
                     android:id="@+id/username"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="devnull"
+                    android:text=""
                     android:textSize="14sp"
+                    android:fontFamily="@font/poppins"
                     android:layout_toRightOf="@id/avatar_image"
                     android:layout_below="@id/nama_lengkap"
                     android:includeFontPadding="false"
@@ -103,6 +104,7 @@
                             android:text="Saldo"
                             android:includeFontPadding="false"
                             android:textSize="14sp"
+                            android:fontFamily="@font/poppins"
                             android:layout_below="@id/coin_label"
                             android:layout_centerHorizontal="true"
                             android:textColor="@color/white"/>
@@ -150,6 +152,7 @@
                             android:text="Booking"
                             android:includeFontPadding="false"
                             android:textSize="14sp"
+                            android:fontFamily="@font/poppins"
                             android:layout_below="@id/booking_label"
                             android:layout_centerHorizontal="true"
                             android:textColor="@color/white"/>
@@ -172,15 +175,18 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:hint="Nama Lengkap"
-                    android:layout_marginBottom="10dp">
+                    android:layout_marginBottom="10dp"
+                    android:textColor="@color/black"
+                    android:fontFamily="@font/poppins">
 
                     <com.google.android.material.textfield.TextInputEditText
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:drawableLeft="@drawable/baseline_person_24"
                         android:drawablePadding="10dp"
-                        android:textSize="15dp"
-                        android:text="Arman Dwi " />
+                        android:textSize="15sp"
+                        android:text=""
+                        android:inputType="text"/>
 
                 </com.google.android.material.textfield.TextInputLayout>
 
@@ -189,15 +195,18 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:hint="Email"
-                    android:layout_marginBottom="10dp">
+                    android:layout_marginBottom="10dp"
+                    android:textColor="@color/black"
+                    android:fontFamily="@font/poppins">
 
                     <com.google.android.material.textfield.TextInputEditText
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:drawableLeft="@drawable/baseline_email_24"
                         android:drawablePadding="10dp"
-                        android:textSize="15dp"
-                        android:text="armandwi.pangestu7@gmail.com" />
+                        android:textSize="15sp"
+                        android:text=""
+                        android:inputType="text"/>
 
                 </com.google.android.material.textfield.TextInputLayout>
 
@@ -206,15 +215,18 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:hint="No Telepon"
-                    android:layout_marginBottom="10dp">
+                    android:layout_marginBottom="10dp"
+                    android:textColor="@color/black"
+                    android:fontFamily="@font/poppins">
 
                     <com.google.android.material.textfield.TextInputEditText
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:drawableLeft="@drawable/baseline_phone_24"
                         android:drawablePadding="10dp"
-                        android:textSize="15dp"
-                        android:text="+62 896-3736-9606" />
+                        android:textSize="15sp"
+                        android:text=""
+                        android:inputType="number"/>
 
                 </com.google.android.material.textfield.TextInputLayout>
 
@@ -223,14 +235,20 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:hint="Password"
-                    android:layout_marginBottom="10dp">
+                    android:layout_marginBottom="10dp"
+                    app:passwordToggleEnabled="true"
+                    app:passwordToggleTint="@color/colorOnSurface"
+                    android:textColor="@color/black"
+                    android:fontFamily="@font/poppins">
 
                     <com.google.android.material.textfield.TextInputEditText
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:drawableLeft="@drawable/baseline_key_24"
+                        android:drawableStart="@drawable/baseline_key_24"
                         android:drawablePadding="10dp"
-                        android:text="testing" />
+                        android:textSize="15sp"
+                        android:text=""
+                        android:inputType="textPassword"/>
 
                 </com.google.android.material.textfield.TextInputLayout>
 

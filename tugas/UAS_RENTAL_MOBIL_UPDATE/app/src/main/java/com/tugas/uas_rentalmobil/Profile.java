@@ -1,40 +1,17 @@
 package com.tugas.uas_rentalmobil;
 
-import androidx.annotation.NonNull;
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.android.material.textfield.TextInputLayout;
-import com.google.firebase.database.DataSnapshot;
-import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
-import com.google.firebase.database.Query;
-import com.google.firebase.database.ValueEventListener;
 
 public class Profile extends BaseActivity {
-    //    @Override
-//    protected void onCreate(Bundle savedInstanceState) {
-//        super.onCreate(savedInstanceState);
-//        setContentView(R.layout.activity_transaction);
-//        bottomNavigationView = findViewById(R.id.bottomNavigation);
-//        bottomNavigationView.setOnItemSelectedListener(navigation);
-//    }
-
-    @Override
-    int getLayoutId() {
-        return R.layout.activity_profile;
-    }
-
-    @Override
-    int getBottomNavigationMenuItemId() {
-        return R.id.myProfile;
-    }
 
     TextInputLayout nama_lengkap, email, noTelepon, password;
     TextView namalengkaplabel, usernamelabel;
@@ -46,9 +23,10 @@ public class Profile extends BaseActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_profile);
+        // Bug bottom navigation
+        //setContentView(R.layout.activity_profile);
 
-        //nooks
+        //hooks
         nama_lengkap = findViewById(R.id.nama_lengkap_profile);
         email = findViewById(R.id.email_profile);
         noTelepon = findViewById(R.id.no_telepon_profile);
@@ -63,8 +41,18 @@ public class Profile extends BaseActivity {
 
         showData();
     }
-    private void showData() {
 
+    @Override
+    int getLayoutId() {
+        return R.layout.activity_profile;
+    }
+
+    @Override
+    int getBottomNavigationMenuItemId() {
+        return R.id.myProfile;
+    }
+
+    private void showData() {
         SharedPreferences preferences = getSharedPreferences("user_data", MODE_PRIVATE);
         NAMA_LENGKAP = preferences.getString("namaLengkap", "");
         USERNAME = preferences.getString("username", "");
@@ -77,52 +65,53 @@ public class Profile extends BaseActivity {
         nama_lengkap.getEditText().setText(NAMA_LENGKAP);
         email.getEditText().setText(EMAIL);
         noTelepon.getEditText().setText(NO_TELEPON);
-
-
-
-
-
+        password.getEditText().setText(PASSWORD);
     }
+
     public void update(View view) {
-
-        if (isNameChanged() || isEmailChange() || isPasswordChange()) {
-            Toast.makeText(this, "Data Has been update", Toast.LENGTH_LONG).show();
+        boolean dataChanged = isDataChanged();
+        if (dataChanged) {
+            Toast.makeText(this, "Data berhasil di perbarui!", Toast.LENGTH_LONG).show();
         } else {
-            Toast.makeText(this, "Data is and can not be update", Toast.LENGTH_LONG).show();
+            Toast.makeText(this, "Data tidak ada perubahan!", Toast.LENGTH_LONG).show();
         }
-    }
-    private boolean isPasswordChange(){
-        if(!PASSWORD.equals(password.getEditText().getText().toString()))
-        {
-            reference.child(USERNAME).child("password").setValue(password.getEditText().getText().toString());
-            PASSWORD=password.getEditText().getText().toString();
-            return true;
-        }else{
-            return false;
-        }
-    }
-    private boolean isNameChanged(){
-        if(!NAMA_LENGKAP.equals(nama_lengkap.getEditText().getText().toString())){
-            reference.child(USERNAME).child("namaLengkap").setValue(nama_lengkap.getEditText().getText().toString());
-
-            NAMA_LENGKAP=nama_lengkap.getEditText().getText().toString();
-
-            return true;
-        }else{
-            return false;
-        }
+        Log.d("Debug", "isDataChanged(): " + dataChanged);
     }
 
-    private boolean isEmailChange(){
-        if(!EMAIL.equals(email.getEditText().getText().toString()))
-        {
-            reference.child(USERNAME).child("email").setValue(email.getEditText().getText().toString());
+    private boolean isDataChanged() {
+        String newNamaLengkap = nama_lengkap.getEditText().getText().toString();
+        String newEmail = email.getEditText().getText().toString();
+        String newNoTelepon = noTelepon.getEditText().getText().toString();
+        String newPassword = password.getEditText().getText().toString();
 
-            EMAIL=email.getEditText().getText().toString();
+        boolean dataChanged = false;
 
-            return true;
-        }else{
-            return false;
+        if (!NAMA_LENGKAP.equalsIgnoreCase(newNamaLengkap)) {
+            reference.child(USERNAME).child("namaLengkap").setValue(newNamaLengkap);
+            NAMA_LENGKAP = newNamaLengkap;
+            namalengkaplabel.setText(NAMA_LENGKAP);
+            dataChanged = true;
         }
+
+        if (!EMAIL.equalsIgnoreCase(newEmail)) {
+            reference.child(USERNAME).child("email").setValue(newEmail);
+            EMAIL = newEmail;
+            dataChanged = true;
+        }
+
+        if (!NO_TELEPON.equalsIgnoreCase(newNoTelepon)) {
+            reference.child(USERNAME).child("noTelepon").setValue(newNoTelepon);
+            NO_TELEPON = newNoTelepon;
+            dataChanged = true;
+        }
+
+        if (!PASSWORD.equalsIgnoreCase(newPassword)) {
+            reference.child(USERNAME).child("password").setValue(newPassword);
+            PASSWORD = newPassword;
+            dataChanged = true;
+        }
+
+        return dataChanged;
     }
+
 }
